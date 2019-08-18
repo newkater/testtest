@@ -13,9 +13,7 @@ public class Main {
 
         app.start(7000);
 
-        app.routes(() -> {
-            crud("/item/:id", new ItemController());
-        });
+        app.routes(() -> crud("/item/:id", new ItemController()));
 
     }
 }

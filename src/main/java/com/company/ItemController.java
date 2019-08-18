@@ -12,7 +12,7 @@ public class ItemController implements CrudHandler {
         CreateItem createItem = context.bodyAsClass(CreateItem.class);
         Item item = new Item();
         item.setId(createItem.getId());
-        item.setText(createItem.getText());
+        item.setLabel(createItem.getLabel());
         Store.setItem(item);
         context.status(200);
         context.result("Success");

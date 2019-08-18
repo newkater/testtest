@@ -10,7 +10,12 @@ public class Store {
     }
 
     public static void deleteItem(int itemId) {
-        Store.items.remove(itemId);
+        for ( Item a:Store.items) {
+            if (a.getId() == itemId) {
+                Store.items.remove(Store.items.indexOf(a));
+                break;
+            }
+        }
     }
 
     public static ArrayList<Item> getItems() {
@@ -18,8 +23,12 @@ public class Store {
     }
 
     public static void updateItem(int itemId, Item newItem) {
-        Store.items.remove(itemId);
-        Store.items.add(itemId, newItem);
-
+        for ( Item a:Store.items) {
+            if (a.getId() == itemId) {
+                Store.items.remove(Store.items.indexOf(a));
+                Store.items.add(a);
+                break;
+            }
+        }
     }
 }

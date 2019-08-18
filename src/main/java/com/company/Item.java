@@ -2,7 +2,7 @@ package com.company;
 
 public class Item {
     private long id;
-    private String text;
+    private String label;
 
     public long getId() {
         return id;
@@ -12,11 +12,11 @@ public class Item {
         this.id = id;
     }
 
-    public String getText() {
-        return text;
+    public String getLabel() {
+        return label;
     }
 
-    public void setText(String text) {
-        this.text = text;
+    public void setLabel(String label) {
+        this.label = label;
     }
 }
